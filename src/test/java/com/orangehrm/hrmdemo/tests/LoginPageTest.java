@@ -18,19 +18,17 @@ public class LoginPageTest extends BaseClass {
 		lPage = new LoginPage();
 	}
 
-	@Test(priority=0)
+	@Test(priority=0, enabled=false)
 	public void logoTest() {
-		driver.get(prop.getProperty("url"));
 		Assert.assertTrue(lPage.isLogoDisplayed(), "Logo not dipslayed in LoginPage");
 	}
 	
-	@Test(priority=1, enabled = true)
+	@Test(priority=1, enabled = false)
 	public void logintest() {
-		driver.get(prop.getProperty("url"));
 		hPage = lPage.login(prop.getProperty("username"), prop.getProperty("password"));
 		Assert.assertTrue(hPage.isLogoDisplayed(), "Logo not dipslayed in HomePage");
 	}
-
+	
 }
 
 	

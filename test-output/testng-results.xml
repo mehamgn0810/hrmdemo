@@ -1,45 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="22131" started-at="2018-07-12T14:37:41Z" finished-at="2018-07-12T14:38:03Z">
+  <suite name="Default suite" duration-ms="15782" started-at="2018-07-12T17:55:40Z" finished-at="2018-07-12T17:55:55Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="22131" started-at="2018-07-12T14:37:41Z" finished-at="2018-07-12T14:38:03Z">
-      <class name="com.orangehrm.hrmdemo.tests.LoginPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.orangehrm.hrmdemo.tests.LoginPageTest@724af044]" name="setUp" is-config="true" duration-ms="5330" started-at="2018-07-12T20:07:41Z" finished-at="2018-07-12T20:07:46Z">
+    <test name="Default test" duration-ms="15782" started-at="2018-07-12T17:55:40Z" finished-at="2018-07-12T17:55:55Z">
+      <class name="com.orangehrm.hrmdemo.tests.HomePageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.orangehrm.hrmdemo.tests.HomePageTest@724af044]" name="setUp" is-config="true" duration-ms="9519" started-at="2018-07-12T23:25:40Z" finished-at="2018-07-12T23:25:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="BeforeMethod()[pri:0, instance:com.orangehrm.hrmdemo.tests.LoginPageTest@724af044]" name="BeforeMethod" is-config="true" duration-ms="38" started-at="2018-07-12T20:07:46Z" finished-at="2018-07-12T20:07:46Z">
+        <test-method status="PASS" signature="BeforeMethod()[pri:0, instance:com.orangehrm.hrmdemo.tests.HomePageTest@724af044]" name="BeforeMethod" is-config="true" duration-ms="5499" started-at="2018-07-12T23:25:49Z" finished-at="2018-07-12T23:25:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeMethod -->
-        <test-method status="PASS" signature="logoTest()[pri:0, instance:com.orangehrm.hrmdemo.tests.LoginPageTest@724af044]" name="logoTest" duration-ms="3597" started-at="2018-07-12T20:07:46Z" finished-at="2018-07-12T20:07:50Z">
+        <test-method status="PASS" signature="verifyCurrentTab()[pri:0, instance:com.orangehrm.hrmdemo.tests.HomePageTest@724af044]" name="verifyCurrentTab" duration-ms="70" started-at="2018-07-12T23:25:55Z" finished-at="2018-07-12T23:25:55Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- logoTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.orangehrm.hrmdemo.tests.LoginPageTest@724af044]" name="tearDown" is-config="true" duration-ms="669" started-at="2018-07-12T20:07:50Z" finished-at="2018-07-12T20:07:51Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.orangehrm.hrmdemo.tests.LoginPageTest@724af044]" name="setUp" is-config="true" duration-ms="4070" started-at="2018-07-12T20:07:51Z" finished-at="2018-07-12T20:07:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="BeforeMethod()[pri:0, instance:com.orangehrm.hrmdemo.tests.LoginPageTest@724af044]" name="BeforeMethod" is-config="true" duration-ms="1" started-at="2018-07-12T20:07:55Z" finished-at="2018-07-12T20:07:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeMethod -->
-        <test-method status="PASS" signature="logintest()[pri:1, instance:com.orangehrm.hrmdemo.tests.LoginPageTest@724af044]" name="logintest" duration-ms="7753" started-at="2018-07-12T20:07:55Z" finished-at="2018-07-12T20:08:02Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logintest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.orangehrm.hrmdemo.tests.LoginPageTest@724af044]" name="tearDown" is-config="true" duration-ms="625" started-at="2018-07-12T20:08:02Z" finished-at="2018-07-12T20:08:03Z">
+        </test-method> <!-- verifyCurrentTab -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.orangehrm.hrmdemo.tests.HomePageTest@724af044]" name="tearDown" is-config="true" duration-ms="668" started-at="2018-07-12T23:25:55Z" finished-at="2018-07-12T23:25:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.orangehrm.hrmdemo.tests.LoginPageTest -->
+      </class> <!-- com.orangehrm.hrmdemo.tests.HomePageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -15,7 +16,7 @@ import org.testng.annotations.BeforeMethod;
 
 import com.orangehrm.hrmdemo.util.EventListener;
 
-public class BaseClass {
+public class BaseClass{
 
 	protected static WebDriver driver;
 	protected Properties prop;
@@ -27,6 +28,7 @@ public class BaseClass {
 		loadProperties();
 		initializeBrowser();
 		initializeEventListener();
+		driver.get(prop.getProperty("url"));
 	}
 	
 	@AfterMethod
@@ -67,5 +69,6 @@ public class BaseClass {
 		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(7, TimeUnit.SECONDS);
 	}
+
 
 }
