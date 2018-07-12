@@ -1,0 +1,40 @@
+package com.orangehrm.hrmdemo.pageobjects;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
+
+import com.orangehrm.hrmdemo.base.BaseClass;
+
+public class LoginPage extends BaseClass{
+	
+	@FindBy(id = "txtUsername")
+	private WebElement uName;
+
+	@FindBy(id = "txtPassword")
+	private WebElement pwd;
+
+	@FindBy(id = "btnLogin")
+	private WebElement loginBtn;
+	
+	@FindBy(how = How.XPATH, using = "//div[@id='divLogo']/img")
+	private WebElement hrmLogo;
+	
+	public LoginPage() {
+		PageFactory.initElements(driver, this);
+	}
+	
+	public HomePage login(String userName, String password) {
+		uName.sendKeys(userName);
+		pwd.sendKeys(password);
+		loginBtn.click();
+		return new HomePage();
+	}
+	
+	public boolean isLogoDisplayed() {
+		return hrmLogo.isDisplayed();
+	}
+	
+
+}
