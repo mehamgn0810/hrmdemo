@@ -15,4 +15,7 @@ public class PIMPage extends BaseClass{
 		PageFactory.initElements(driver, this);
 	}
 
+	public void clickaddEmployeeLink(){
+		addEmployee.click();
+	}
 }

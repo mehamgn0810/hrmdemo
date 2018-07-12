@@ -10,26 +10,26 @@ import com.orangehrm.hrmdemo.pageobjects.HomePage;
 import com.orangehrm.hrmdemo.pageobjects.LoginPage;
 import com.orangehrm.hrmdemo.pageobjects.PIMPage;
 
-public class PIMPageTest extends BaseClass{
+public class PIMPageTest extends BaseClass {
 
 	LoginPage lPage;
 	HomePage hPage;
 	PIMPage pPage;
-	
+
 	@BeforeMethod
 	public void beforeMethod() {
 		lPage = new LoginPage();
 		hPage = lPage.login(prop.getProperty("username"), prop.getProperty("password"));
-		PIMPage pPage = hPage.clickPIMTab();
+		pPage = hPage.clickPIMTab();
 	}
-	
+
 	@Test
 	public void verifyPIMPage() {
 		Assert.assertTrue(Commons.isCurrentTab("PIM"));
 	}
-	
+
 	@Test
 	public void addEmployee() {
-		
+		pPage.clickaddEmployeeLink();
 	}
 }
