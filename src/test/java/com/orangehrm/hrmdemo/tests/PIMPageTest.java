@@ -9,6 +9,8 @@ import com.orangehrm.hrmdemo.pageobjects.Commons;
 import com.orangehrm.hrmdemo.pageobjects.HomePage;
 import com.orangehrm.hrmdemo.pageobjects.LoginPage;
 import com.orangehrm.hrmdemo.pageobjects.PIMPage;
+import com.orangehrm.hrmdemo.pageobjects.PIMTab.AddEmployee;
+import com.orangehrm.hrmdemo.pageobjects.PIMTab.PersonalDetails;
 
 public class PIMPageTest extends BaseClass {
 
@@ -29,7 +31,10 @@ public class PIMPageTest extends BaseClass {
 	}
 
 	@Test
-	public void addEmployee() {
-		pPage.clickaddEmployeeLink();
+	public void addEmployeeWithoutPhotograph() {
+		AddEmployee addEmpPage = pPage.clickaddEmployeeLink();
+		Assert.assertTrue(addEmpPage.verifyAddEmployeePage(), "Add Employee Page not displayed");
+		PersonalDetails pDetailsPage = addEmpPage.addEmployeeWithoutPhoto("Jack", "Sparrow");
+		Assert.assertTrue(pDetailsPage.verifyPersonalDetailsPage(), "Personal Details page not dipslayed");
 	}
 }
