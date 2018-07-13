@@ -14,12 +14,14 @@ public class HomePage extends BaseClass{
 	
 	@FindBy(id = "menu_pim_viewPimModule")
 	WebElement pimTab;
+	
+	@FindBy(id = "menu_leave_viewLeaveModule")
+	WebElement leaveTab;
 
 	@FindBy(id = "menu_dashboard_index")
 	WebElement dashboardTab;
 	
-	@FindBy(id = "menu_leave_viewLeaveModule")
-	WebElement leaveTab;
+	
 	
 	public HomePage() {
 		PageFactory.initElements(driver, this);
@@ -29,8 +31,9 @@ public class HomePage extends BaseClass{
 		return hrmLogo.isDisplayed();
 	}
 	
-	public void clickTab(String tabName) {
-		driver.findElement(By.xpath("//div[@id='wrapper']//b[contains(text(),'" + tabName + "')]")).click();
+	public boolean isCurrentTab(String tabName) {
+		boolean status = driver.findElement(By.xpath("//li[@class='current']//b[text()='" + tabName + "']")).isDisplayed();
+		return status;
 	}
 	
 	public PIMPage clickPIMTab(){

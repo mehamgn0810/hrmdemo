@@ -60,6 +60,7 @@ public class BaseClass{
 		String browser = prop.getProperty("browser");
 		if (browser.equalsIgnoreCase("chrome")) {
 			driver = new ChromeDriver();
+			driver.manage().window().maximize();
 		} else if (browser.equalsIgnoreCase("firefox")) {
 			driver = new FirefoxDriver();
 		}

@@ -6,16 +6,17 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.orangehrm.hrmdemo.base.BaseClass;
 
-public class PersonalDetails extends BaseClass{
+public class EmployeeList extends BaseClass{
 	
-	@FindBy(xpath = "//div[@id='pdMainContainer']//h1[text()='Personal Details']")
-	WebElement pDetailsHeader;
+	@FindBy(xpath = "//*[@id='employee-information']//h1[text()='Employee Information']")
+	WebElement empInfoLabel;
 	
-	public PersonalDetails() {
+	public EmployeeList() {
 		PageFactory.initElements(driver, this);
 	}
 
-	public boolean verifyPersonalDetailsPage() {
-		return pDetailsHeader.isDisplayed();
+	public boolean verifyEmployeeInformationLabelr() {
+		return empInfoLabel.isDisplayed();
 	}
+	
 }

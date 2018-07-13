@@ -8,8 +8,8 @@ import com.orangehrm.hrmdemo.base.BaseClass;
 
 public class AddEmployee extends BaseClass {
 	
-	@FindBy(xpath = "//div[@id='content']//h1")
-	WebElement header;
+	@FindBy(xpath = "//div[@id='content']//h1[text()='Add Employee']")
+	WebElement addEmpLabel;
 
 	@FindBy(id = "firstName")
 	WebElement fName;
@@ -27,8 +27,8 @@ public class AddEmployee extends BaseClass {
 		PageFactory.initElements(driver, this);
 	}
 	
-	public boolean verifyAddEmployeePage() {
-		return header.isDisplayed();
+	public boolean verifyAddEmployeeLabel() {
+		return addEmpLabel.isDisplayed();
 	}
 
 	public PersonalDetails addEmployeeWithoutPhoto(String firstName, String lastName) {
