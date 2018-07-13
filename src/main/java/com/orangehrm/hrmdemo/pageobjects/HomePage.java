@@ -1,5 +1,7 @@
 package com.orangehrm.hrmdemo.pageobjects;
 
+import java.util.NoSuchElementException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -32,8 +34,13 @@ public class HomePage extends BaseClass{
 	}
 	
 	public boolean isCurrentTab(String tabName) {
-		boolean status = driver.findElement(By.xpath("//li[@class='current']//b[text()='" + tabName + "']")).isDisplayed();
-		return status;
+		try {
+			boolean status = driver.findElement(By.xpath("//li[@class='current']//b[text()='" + tabName + "']")).isDisplayed();
+			return status;
+		}catch(NoSuchElementException e) {
+			return false;
+		}
+		
 	}
 	
 	public PIMPage clickPIMTab(){

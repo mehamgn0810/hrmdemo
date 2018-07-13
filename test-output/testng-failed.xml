@@ -6,7 +6,7 @@
       <class name="com.orangehrm.hrmdemo.tests.PIMPageTest">
         <methods>
           <include name="tearDown"/>
-          <include name="addEmployeeWithoutPhotograph"/>
+          <include name="verifyNavigationToAllSubTabs"/>
           <include name="setUp"/>
           <include name="beforeMethod"/>
         </methods>

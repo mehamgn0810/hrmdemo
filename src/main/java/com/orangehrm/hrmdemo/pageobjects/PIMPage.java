@@ -1,6 +1,7 @@
 package com.orangehrm.hrmdemo.pageobjects;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -33,7 +34,12 @@ public class PIMPage extends BaseClass{
 	}
 	
 	public boolean isSelectedTab(String tabName) {
-		boolean status = driver.findElement(By.xpath("//li[@class='selected']//a[text()='" + tabName + "']")).isDisplayed();
-		return status;
+		try {
+			boolean status = driver.findElement(By.xpath("//li[@class='selected']//a[text()='" + tabName + "']")).isDisplayed();
+			return status;
+		}catch(NoSuchElementException e) {
+			return false;
+		}
+		
 	}
 }
