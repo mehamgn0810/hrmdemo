@@ -1,9 +1,13 @@
 package com.orangehrm.hrmdemo.pageobjects;
 
-import com.orangehrm.hrmdemo.base.BaseClass;
+import org.openqa.selenium.support.PageFactory;
 
-public class DashboardPage extends BaseClass{
-	
-	
+import com.orangehrm.hrmdemo.commons.CommonObjects;
+
+public class DashboardPage extends CommonObjects {
+
+	public DashboardPage() {
+		PageFactory.initElements(driver, this);
+	}
 
 }

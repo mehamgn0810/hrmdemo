@@ -3,9 +3,28 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test name="Test(failed)">
     <classes>
+      <class name="com.orangehrm.hrmdemo.tests.HomePageTest">
+        <methods>
+          <include name="verifyCurrentTab"/>
+          <include name="BeforeMethod"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="verifyNavigationToAllTabs"/>
+        </methods>
+      </class> <!-- com.orangehrm.hrmdemo.tests.HomePageTest -->
+      <class name="com.orangehrm.hrmdemo.tests.LoginPageTest">
+        <methods>
+          <include name="BeforeMethod"/>
+          <include name="tearDown"/>
+          <include name="logintest"/>
+          <include name="setUp"/>
+          <include name="verifyLogo"/>
+        </methods>
+      </class> <!-- com.orangehrm.hrmdemo.tests.LoginPageTest -->
       <class name="com.orangehrm.hrmdemo.tests.PIMPageTest">
         <methods>
           <include name="tearDown"/>
+          <include name="addEmployeeWithoutPhotograph"/>
           <include name="verifyNavigationToAllSubTabs"/>
           <include name="setUp"/>
           <include name="beforeMethod"/>

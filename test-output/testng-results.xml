@@ -1,99 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="6" passed="5">
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="102942" started-at="2018-07-13T10:16:57Z" finished-at="2018-07-13T10:18:40Z">
+  <suite name="Default suite" duration-ms="14738" started-at="2018-07-18T17:17:22Z" finished-at="2018-07-18T17:17:36Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="102942" started-at="2018-07-13T10:16:57Z" finished-at="2018-07-13T10:18:40Z">
-      <class name="com.orangehrm.hrmdemo.tests.LoginPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.orangehrm.hrmdemo.tests.LoginPageTest@29ee9faa]" name="setUp" is-config="true" duration-ms="9620" started-at="2018-07-13T15:46:57Z" finished-at="2018-07-13T15:47:07Z">
+    <test name="Default test" duration-ms="14738" started-at="2018-07-18T17:17:22Z" finished-at="2018-07-18T17:17:36Z">
+      <class name="com.orangehrm.hrmdemo.tests.StaleElementTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.orangehrm.hrmdemo.tests.StaleElementTest@724af044]" name="setUp" is-config="true" duration-ms="11842" started-at="2018-07-18T22:47:22Z" finished-at="2018-07-18T22:47:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="BeforeMethod()[pri:0, instance:com.orangehrm.hrmdemo.tests.LoginPageTest@29ee9faa]" name="BeforeMethod" is-config="true" duration-ms="52" started-at="2018-07-13T15:47:07Z" finished-at="2018-07-13T15:47:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeMethod -->
-        <test-method status="PASS" signature="verifyLogo()[pri:0, instance:com.orangehrm.hrmdemo.tests.LoginPageTest@29ee9faa]" name="verifyLogo" duration-ms="51" started-at="2018-07-13T15:47:07Z" finished-at="2018-07-13T15:47:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyLogo -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.orangehrm.hrmdemo.tests.LoginPageTest@29ee9faa]" name="tearDown" is-config="true" duration-ms="625" started-at="2018-07-13T15:47:07Z" finished-at="2018-07-13T15:47:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.orangehrm.hrmdemo.tests.LoginPageTest@29ee9faa]" name="setUp" is-config="true" duration-ms="8489" started-at="2018-07-13T15:47:46Z" finished-at="2018-07-13T15:47:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="BeforeMethod()[pri:0, instance:com.orangehrm.hrmdemo.tests.LoginPageTest@29ee9faa]" name="BeforeMethod" is-config="true" duration-ms="2" started-at="2018-07-13T15:47:55Z" finished-at="2018-07-13T15:47:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeMethod -->
-        <test-method status="PASS" signature="logintest()[pri:1, instance:com.orangehrm.hrmdemo.tests.LoginPageTest@29ee9faa]" name="logintest" duration-ms="5441" started-at="2018-07-13T15:47:55Z" finished-at="2018-07-13T15:48:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logintest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.orangehrm.hrmdemo.tests.LoginPageTest@29ee9faa]" name="tearDown" is-config="true" duration-ms="616" started-at="2018-07-13T15:48:00Z" finished-at="2018-07-13T15:48:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.orangehrm.hrmdemo.tests.LoginPageTest -->
-      <class name="com.orangehrm.hrmdemo.tests.PIMPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.orangehrm.hrmdemo.tests.PIMPageTest@cc285f4]" name="setUp" is-config="true" duration-ms="8454" started-at="2018-07-13T15:47:22Z" finished-at="2018-07-13T15:47:30Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.orangehrm.hrmdemo.tests.PIMPageTest@cc285f4]" name="beforeMethod" is-config="true" duration-ms="7376" started-at="2018-07-13T15:47:30Z" finished-at="2018-07-13T15:47:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="FAIL" signature="verifyNavigationToAllSubTabs()[pri:0, instance:com.orangehrm.hrmdemo.tests.PIMPageTest@cc285f4]" name="verifyNavigationToAllSubTabs" duration-ms="8127" started-at="2018-07-13T15:47:37Z" finished-at="2018-07-13T15:47:45Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//li[@class='selected']//a[text()='Add Employee']"}
-  (Session info: chrome=67.0.3396.99)
-  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
-System info: host: 'MEHAVARNAN', ip: '10.75.40.187', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_151'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.37.544315 (730aa6a5fdba15..., userDataDir: C:\Users\MEHAVA~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 67.0.3396.99, webStorageEnabled: true}
-Session ID: 493b326ce589aaba6fdd36b0bc8d2247
-*** Element info: {Using=xpath, value=//li[@class='selected']//a[text()='Add Employee']}]]>
-            </message>
+        <test-method status="FAIL" signature="f()[pri:0, instance:com.orangehrm.hrmdemo.tests.StaleElementTest@724af044]" name="f" duration-ms="2149" started-at="2018-07-18T22:47:34Z" finished-at="2018-07-18T22:47:36Z">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//li[@class='selected']//a[text()='Add Employee']"}
-  (Session info: chrome=67.0.3396.99)
-  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
-System info: host: 'MEHAVARNAN', ip: '10.75.40.187', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_151'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.37.544315 (730aa6a5fdba15..., userDataDir: C:\Users\MEHAVA~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 67.0.3396.99, webStorageEnabled: true}
-Session ID: 493b326ce589aaba6fdd36b0bc8d2247
-*** Element info: {Using=xpath, value=//li[@class='selected']//a[text()='Add Employee']}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:317)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:419)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:309)
-	at com.orangehrm.hrmdemo.pageobjects.PIMPage.isSelectedTab(PIMPage.java:36)
-	at com.orangehrm.hrmdemo.tests.PIMPageTest.verifyNavigationToAllSubTabs(PIMPageTest.java:34)
+              <![CDATA[java.lang.NullPointerException
+	at com.orangehrm.hrmdemo.tests.StaleElementTest.f(StaleElementTest.java:20)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -121,65 +43,15 @@ Session ID: 493b326ce589aaba6fdd36b0bc8d2247
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyNavigationToAllSubTabs -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.orangehrm.hrmdemo.tests.PIMPageTest@cc285f4]" name="tearDown" is-config="true" duration-ms="675" started-at="2018-07-13T15:47:45Z" finished-at="2018-07-13T15:47:46Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.orangehrm.hrmdemo.tests.PIMPageTest@cc285f4]" name="setUp" is-config="true" duration-ms="8296" started-at="2018-07-13T15:48:20Z" finished-at="2018-07-13T15:48:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.orangehrm.hrmdemo.tests.PIMPageTest@cc285f4]" name="beforeMethod" is-config="true" duration-ms="7215" started-at="2018-07-13T15:48:29Z" finished-at="2018-07-13T15:48:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="addEmployeeWithoutPhotograph()[pri:1, instance:com.orangehrm.hrmdemo.tests.PIMPageTest@cc285f4]" name="addEmployeeWithoutPhotograph" duration-ms="3786" started-at="2018-07-13T15:48:36Z" finished-at="2018-07-13T15:48:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addEmployeeWithoutPhotograph -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.orangehrm.hrmdemo.tests.PIMPageTest@cc285f4]" name="tearDown" is-config="true" duration-ms="627" started-at="2018-07-13T15:48:40Z" finished-at="2018-07-13T15:48:40Z">
+        </test-method> <!-- f -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.orangehrm.hrmdemo.tests.StaleElementTest@724af044]" name="tearDown" is-config="true" duration-ms="695" started-at="2018-07-18T22:47:36Z" finished-at="2018-07-18T22:47:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.orangehrm.hrmdemo.tests.PIMPageTest -->
-      <class name="com.orangehrm.hrmdemo.tests.HomePageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.orangehrm.hrmdemo.tests.HomePageTest@c038203]" name="setUp" is-config="true" duration-ms="9782" started-at="2018-07-13T15:47:08Z" finished-at="2018-07-13T15:47:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="BeforeMethod()[pri:0, instance:com.orangehrm.hrmdemo.tests.HomePageTest@c038203]" name="BeforeMethod" is-config="true" duration-ms="3440" started-at="2018-07-13T15:47:17Z" finished-at="2018-07-13T15:47:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeMethod -->
-        <test-method status="PASS" signature="verifyCurrentTab()[pri:0, instance:com.orangehrm.hrmdemo.tests.HomePageTest@c038203]" name="verifyCurrentTab" duration-ms="47" started-at="2018-07-13T15:47:21Z" finished-at="2018-07-13T15:47:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyCurrentTab -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.orangehrm.hrmdemo.tests.HomePageTest@c038203]" name="tearDown" is-config="true" duration-ms="617" started-at="2018-07-13T15:47:21Z" finished-at="2018-07-13T15:47:22Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.orangehrm.hrmdemo.tests.HomePageTest@c038203]" name="setUp" is-config="true" duration-ms="8351" started-at="2018-07-13T15:48:01Z" finished-at="2018-07-13T15:48:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="BeforeMethod()[pri:0, instance:com.orangehrm.hrmdemo.tests.HomePageTest@c038203]" name="BeforeMethod" is-config="true" duration-ms="5556" started-at="2018-07-13T15:48:09Z" finished-at="2018-07-13T15:48:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeMethod -->
-        <test-method status="PASS" signature="verifyNavigationToAllTabs()[pri:1, instance:com.orangehrm.hrmdemo.tests.HomePageTest@c038203]" name="verifyNavigationToAllTabs" duration-ms="5000" started-at="2018-07-13T15:48:15Z" finished-at="2018-07-13T15:48:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyNavigationToAllTabs -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.orangehrm.hrmdemo.tests.HomePageTest@c038203]" name="tearDown" is-config="true" duration-ms="638" started-at="2018-07-13T15:48:20Z" finished-at="2018-07-13T15:48:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.orangehrm.hrmdemo.tests.HomePageTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+      </class> <!-- com.orangehrm.hrmdemo.tests.StaleElementTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

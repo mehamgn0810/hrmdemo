@@ -1,4 +1,4 @@
-package com.orangehrm.hrmdemo.pageobjects.PIMTab;
+package com.orangehrm.hrmdemo.pageobjects;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -38,6 +38,4 @@ public class AddEmployee extends BaseClass {
 		return new PersonalDetails();
 	}
 	
-	
-
 }

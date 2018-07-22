@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test name="Test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="com.orangehrm.hrmdemo.tests.PIMPageTest">
+      <class name="com.orangehrm.hrmdemo.tests.StaleElementTest">
         <methods>
           <include name="tearDown"/>
-          <include name="verifyNavigationToAllSubTabs"/>
+          <include name="f"/>
           <include name="setUp"/>
-          <include name="beforeMethod"/>
         </methods>
-      </class> <!-- com.orangehrm.hrmdemo.tests.PIMPageTest -->
+      </class> <!-- com.orangehrm.hrmdemo.tests.StaleElementTest -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

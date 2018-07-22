@@ -25,14 +25,14 @@ public class LoginPage extends BaseClass{
 		PageFactory.initElements(driver, this);
 	}
 	
-	public HomePage login(String userName, String password) {
+	public DashboardPage login(String userName, String password) {
 		uName.sendKeys(userName);
 		pwd.sendKeys(password);
 		loginBtn.click();
-		return new HomePage();
+		return new DashboardPage();
 	}
 	
-	public boolean isLogoDisplayed() {
+	public boolean isLoginPageLogoDisplayed() {
 		return hrmLogo.isDisplayed();
 	}
 	
