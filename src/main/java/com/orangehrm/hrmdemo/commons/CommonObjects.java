@@ -9,8 +9,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.orangehrm.hrmdemo.base.BaseClass;
 import com.orangehrm.hrmdemo.pageobjects.DashboardPage;
+import com.orangehrm.hrmdemo.pageobjects.EmployeeList;
 import com.orangehrm.hrmdemo.pageobjects.LeavePage;
-import com.orangehrm.hrmdemo.pageobjects.PIMPage;
 
 public class CommonObjects extends BaseClass {
 
@@ -45,9 +45,9 @@ public class CommonObjects extends BaseClass {
 
 	}
 
-	public PIMPage clickPIMTab() {
+	public EmployeeList clickPIMTab() {
 		pimTab.click();
-		return new PIMPage();
+		return new EmployeeList();
 	}
 
 	public DashboardPage clickDashboardTab() {

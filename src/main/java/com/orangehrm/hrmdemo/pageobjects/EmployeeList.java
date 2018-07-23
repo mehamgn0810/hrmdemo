@@ -6,9 +6,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.orangehrm.hrmdemo.base.BaseClass;
+import com.orangehrm.hrmdemo.commons.CommonObjects;
+import com.orangehrm.hrmdemo.commons.PIMCommons;
 
-public class EmployeeList extends BaseClass{
+public class EmployeeList extends CommonObjects{
+	
+	PIMCommons pimCommons;
 	
 	@FindBy(xpath = "//*[@id='employee-information']//h1[text()='Employee Information']")
 	WebElement empInfoLabel;
@@ -21,6 +24,7 @@ public class EmployeeList extends BaseClass{
 	
 	public EmployeeList() {
 		PageFactory.initElements(driver, this);
+		pimCommons = new PIMCommons();
 	}
 
 	public boolean verifyEmployeeInformationLabel() {
@@ -40,5 +44,10 @@ public class EmployeeList extends BaseClass{
 		}catch (NoSuchElementException e) {
 			return false;
 		}
+	}
+	
+	public AddEmployee clickAddEmployeeLink() {
+		pimCommons.clickaddEmployeeLink();
+		return new AddEmployee();
 	}
 }

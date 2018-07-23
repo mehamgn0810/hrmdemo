@@ -4,9 +4,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.orangehrm.hrmdemo.base.BaseClass;
+import com.orangehrm.hrmdemo.commons.CommonObjects;
 
-public class AddEmployee extends BaseClass {
+public class AddEmployee extends CommonObjects {
 	
 	@FindBy(xpath = "//div[@id='content']//h1[text()='Add Employee']")
 	WebElement addEmpLabel;
