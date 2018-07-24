@@ -12,7 +12,7 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class ExcelUtility {
+public class ExcelUtility{
 
 	private static Workbook wBook;
 	private static Sheet sheet;
@@ -33,7 +33,7 @@ public class ExcelUtility {
 		sheet = wBook.getSheet(sheetName);
 	}
 
-	public static Object[][] readExcel() throws IOException {
+	public static Object[][] readExcel() {
 
 		int lastRowNum = sheet.getLastRowNum();
 
