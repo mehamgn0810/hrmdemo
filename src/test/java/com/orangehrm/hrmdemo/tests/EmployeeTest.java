@@ -1,5 +1,7 @@
 package com.orangehrm.hrmdemo.tests;
 
+import java.io.IOException;
+
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -10,6 +12,8 @@ import com.orangehrm.hrmdemo.pageobjects.DashboardPage;
 import com.orangehrm.hrmdemo.pageobjects.EmployeeList;
 import com.orangehrm.hrmdemo.pageobjects.LoginPage;
 import com.orangehrm.hrmdemo.pageobjects.PersonalDetails;
+import com.orangehrm.hrmdemo.util.Constants;
+import com.orangehrm.hrmdemo.util.ExcelUtility;
 
 public class EmployeeTest extends BaseClass{
 	
@@ -21,6 +25,11 @@ public class EmployeeTest extends BaseClass{
 	
 	@BeforeMethod
 	public void BeforeMethod() {
+		try {
+			ExcelUtility.setExcelInstance(Constants.testDataFile, Constants.testDataFile, Constants.employeeTestDataSheet);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		loginPage = new LoginPage();
 		dashboardPage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 		employeeList = dashboardPage.clickPIMTab();

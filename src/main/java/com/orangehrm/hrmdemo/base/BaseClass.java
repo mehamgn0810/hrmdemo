@@ -45,8 +45,7 @@ public class BaseClass{
 	protected void loadProperties() {
 		try {
 			prop = new Properties();
-			FileInputStream fis = new FileInputStream("C:\\Users\\MEHAVARNAN\\git\\hrmdemo\\src\\main\\java\\"
-					+ "com\\orangehrm\\hrmdemo\\config\\config.properties");
+			FileInputStream fis = new FileInputStream("C:\\Users\\MEHAVARNAN\\git\\hrmdemo\\src\\main\\resources\\config.properties");
 			prop.load(fis);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
