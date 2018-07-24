@@ -1,12 +1,12 @@
-package com.orangehrm.hrmdemo.tests;
+package com.orangehrm.tests;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import com.orangehrm.hrmdemo.base.BaseClass;
-import com.orangehrm.hrmdemo.pageobjects.DashboardPage;
-import com.orangehrm.hrmdemo.pageobjects.LoginPage;
+import com.orangehrm.base.BaseClass;
+import com.orangehrm.pageobjects.DashboardPage;
+import com.orangehrm.pageobjects.LoginPage;
 
 public class LoginPageTest extends BaseClass {
 

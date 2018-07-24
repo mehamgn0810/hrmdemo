@@ -1,4 +1,4 @@
-package com.orangehrm.hrmdemo.util;
+package com.orangehrm.util;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;

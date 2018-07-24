@@ -1,4 +1,4 @@
-package com.orangehrm.hrmdemo.pageobjects;
+package com.orangehrm.pageobjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
@@ -6,8 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.orangehrm.hrmdemo.commons.CommonObjects;
-import com.orangehrm.hrmdemo.commons.PIMCommons;
+import com.orangehrm.commons.CommonObjects;
+import com.orangehrm.commons.PIMCommons;
 
 public class EmployeeList extends CommonObjects {
 

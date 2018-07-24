@@ -1,11 +1,11 @@
-package com.orangehrm.hrmdemo.pageobjects;
+package com.orangehrm.pageobjects;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-import com.orangehrm.hrmdemo.base.BaseClass;
+import com.orangehrm.base.BaseClass;
 
 public class LoginPage extends BaseClass{
 	

@@ -1,4 +1,4 @@
-package com.orangehrm.hrmdemo.tests;
+package com.orangehrm.tests;
 
 import java.io.IOException;
 
@@ -6,14 +6,14 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import com.orangehrm.hrmdemo.base.BaseClass;
-import com.orangehrm.hrmdemo.pageobjects.AddEmployee;
-import com.orangehrm.hrmdemo.pageobjects.DashboardPage;
-import com.orangehrm.hrmdemo.pageobjects.EmployeeList;
-import com.orangehrm.hrmdemo.pageobjects.LoginPage;
-import com.orangehrm.hrmdemo.pageobjects.PersonalDetails;
-import com.orangehrm.hrmdemo.util.Constants;
-import com.orangehrm.hrmdemo.util.ExcelUtility;
+import com.orangehrm.base.BaseClass;
+import com.orangehrm.pageobjects.AddEmployee;
+import com.orangehrm.pageobjects.DashboardPage;
+import com.orangehrm.pageobjects.EmployeeList;
+import com.orangehrm.pageobjects.LoginPage;
+import com.orangehrm.pageobjects.PersonalDetails;
+import com.orangehrm.util.Constants;
+import com.orangehrm.util.ExcelUtility;
 
 public class EmployeeTest extends BaseClass{
 	

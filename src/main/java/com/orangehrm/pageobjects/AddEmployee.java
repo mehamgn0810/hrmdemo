@@ -1,10 +1,10 @@
-package com.orangehrm.hrmdemo.pageobjects;
+package com.orangehrm.pageobjects;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.orangehrm.hrmdemo.commons.CommonObjects;
+import com.orangehrm.commons.CommonObjects;
 
 public class AddEmployee extends CommonObjects {
 	

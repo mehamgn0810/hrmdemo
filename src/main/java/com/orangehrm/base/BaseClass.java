@@ -1,4 +1,4 @@
-package com.orangehrm.hrmdemo.base;
+package com.orangehrm.base;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -13,7 +13,7 @@ import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-import com.orangehrm.hrmdemo.util.EventListener;
+import com.orangehrm.util.EventListener;
 
 public class BaseClass{
 
