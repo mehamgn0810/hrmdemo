@@ -11,8 +11,7 @@ public class TestDataProviders {
 
 	public TestDataProviders() {
 		try {
-			ExcelUtility.setExcelInstance(Constants.testDataFile, Constants.testDataFile,
-					Constants.employeeTestDataSheet);
+			ExcelUtility.setExcelInstance(Constants.testDataPath, Constants.testDataFile, Constants.employeeTestDataSheet);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

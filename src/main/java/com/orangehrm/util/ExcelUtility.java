@@ -20,6 +20,9 @@ public class ExcelUtility{
 	public static void setExcelInstance(String path, String fileName, String sheetName) throws IOException {
 
 		File f = new File(path + fileName);
+		System.out.println(f.isDirectory());
+		System.out.println(f.isFile());
+		System.out.println(f.canRead());
 		FileInputStream fis = new FileInputStream(f);
 
 		String fileExt = fileName.substring(fileName.indexOf("."));
