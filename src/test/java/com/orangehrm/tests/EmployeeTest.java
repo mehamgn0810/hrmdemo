@@ -1,7 +1,5 @@
 package com.orangehrm.tests;
 
-import java.io.IOException;
-
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -13,8 +11,6 @@ import com.orangehrm.pageobjects.DashboardPage;
 import com.orangehrm.pageobjects.EmployeeList;
 import com.orangehrm.pageobjects.LoginPage;
 import com.orangehrm.pageobjects.PersonalDetails;
-import com.orangehrm.util.Constants;
-import com.orangehrm.util.ExcelUtility;
 
 public class EmployeeTest extends BaseClass {
 
@@ -26,12 +22,6 @@ public class EmployeeTest extends BaseClass {
 
 	@BeforeMethod
 	public void BeforeMethod() {
-		try {
-			ExcelUtility.setExcelInstance(Constants.testDataFile, Constants.testDataFile,
-					Constants.employeeTestDataSheet);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
 		loginPage = new LoginPage();
 		dashboardPage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 		employeeList = dashboardPage.clickPIMTab();
@@ -44,13 +34,13 @@ public class EmployeeTest extends BaseClass {
 		Assert.assertEquals(personalDetails.verifyProfileName(), firstName + " " + lastName, "Profile Name validation failed");
 	}
 
-	@Test(dataProvider = "employeeTest", dataProviderClass = TestDataProviders.class, enabled = true, dependsOnMethods = "addEmployeeWithoutPhotograph")
+	@Test(dataProvider = "employeeTest", dataProviderClass = TestDataProviders.class, enabled = false, dependsOnMethods = "addEmployeeWithoutPhotograph")
 	public void searchEmployeeWithName(String name) {
 		employeeList.searchEmployeebyName(name);
 		Assert.assertTrue(employeeList.isEmployeeDisplayed(name), "Employee not displayed in Results List");
 	}
 
-	@Test(dataProvider = "employeeTest", dataProviderClass = TestDataProviders.class, dependsOnMethods = "searchEmployeeWithName")
+	@Test(dataProvider = "employeeTest", dataProviderClass = TestDataProviders.class, dependsOnMethods = "searchEmployeeWithName", enabled=false)
 	public void deleteEmployee(String fName) {
 		employeeList.searchEmployeebyName(fName);
 		employeeList.selectEmployeebyFirstName(fName);

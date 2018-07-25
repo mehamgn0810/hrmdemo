@@ -26,7 +26,7 @@ public class BaseClass{
 	protected void setUp() {
 		loadProperties();
 		initializeBrowser();
-		///initializeEventListener();
+		initializeEventListener();
 		driver.get(prop.getProperty("url"));
 	}
 	
