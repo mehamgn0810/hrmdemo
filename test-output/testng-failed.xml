@@ -3,12 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.orangehrm.tests.Temp">
+      <class name="com.orangehrm.tests.EmployeeTest">
         <methods>
-          <include name="beforeMethodTemp"/>
-          <include name="test123"/>
+          <include name="setUp"/>
+          <include name="addEmployeeWithLoginDetails"/>
+          <include name="BeforeMethod"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.orangehrm.tests.Temp -->
+      </class> <!-- com.orangehrm.tests.EmployeeTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

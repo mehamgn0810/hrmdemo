@@ -27,11 +27,24 @@ public class EmployeeTest extends BaseClass {
 		employeeList = dashboardPage.clickPIMTab();
 	}
 
-	@Test(dataProvider = "employeeTest", dataProviderClass = TestDataProviders.class, enabled = true)
+	@Test(dataProvider = "employeeTest", dataProviderClass = TestDataProviders.class, enabled = false)
 	public void addEmployeeWithoutPhotograph(String firstName, String lastName) {
 		addEmployee = employeeList.clickAddEmployeeLink();
 		personalDetails = addEmployee.addEmployeeWithoutPhoto(firstName, lastName);
 		Assert.assertEquals(personalDetails.verifyProfileName(), firstName + " " + lastName, "Profile Name validation failed");
+	}
+	
+	@Test
+	public void addEmployeeWithLoginDetails() throws InterruptedException { 
+		addEmployee = employeeList.clickAddEmployeeLink();
+		addEmployee.enterFirstName("Jack");
+		addEmployee.enterLastName("Sparrow");
+		addEmployee.clickCreateLoginCheckBox();
+		addEmployee.enterUserName("JackS");
+		addEmployee.enterUserPassword("testing123");
+		addEmployee.enterRePassword("testing123");
+		Assert.assertTrue(addEmployee.verifySelectedStatus("Enabled"), "Employee Status is not Enabled");
+		addEmployee.clickSaveButton();
 	}
 
 	@Test(dataProvider = "employeeTest", dataProviderClass = TestDataProviders.class, enabled = false, dependsOnMethods = "addEmployeeWithoutPhotograph")
@@ -49,4 +62,5 @@ public class EmployeeTest extends BaseClass {
 				"Successfully Deleted Message not displayed");
 		Assert.assertFalse(employeeList.isEmployeeDisplayed(fName), "Employee displayed in Results List");
 	}
+	
 }

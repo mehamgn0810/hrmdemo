@@ -1,18 +1,18 @@
 package com.orangehrm.commons;
 
-import java.util.NoSuchElementException;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.orangehrm.base.BaseClass;
+import com.orangehrm.pageobjects.AssignLeave;
 import com.orangehrm.pageobjects.DashboardPage;
 import com.orangehrm.pageobjects.EmployeeList;
-import com.orangehrm.pageobjects.LeavePage;
 
 public class CommonObjects extends BaseClass {
+	
+	@FindBy(xpath="//li[@class='current']//b")
+	WebElement currentTab;
 
 	@FindBy(xpath = "//div[@id='branding']//img")
 	private WebElement hrmLogo;
@@ -35,11 +35,10 @@ public class CommonObjects extends BaseClass {
 	}
 
 	public boolean isCurrentTab(String tabName) {
-		try {
-			boolean status = driver.findElement(By.xpath("//li[@class='current']//b[text()='" + tabName + "']"))
-					.isDisplayed();
-			return status;
-		} catch (NoSuchElementException e) {
+		String activeTab = currentTab.getText();
+		if (activeTab.equals(tabName)) {
+			return true;
+		}else {
 			return false;
 		}
 
@@ -55,8 +54,8 @@ public class CommonObjects extends BaseClass {
 		return new DashboardPage();
 	}
 
-	public LeavePage clickLeaveTab() {
+	public AssignLeave clickLeaveTab() {
 		leaveTab.click();
-		return new LeavePage();
+		return new AssignLeave();
 	}
 }
