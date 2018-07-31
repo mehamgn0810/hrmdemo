@@ -9,8 +9,8 @@ import com.orangehrm.util.UtilityMethods;
 
 public class AddLeaveEntitlements extends BaseClass{
 
-	@FindBy(id="entitlements_employee_empName")
-	WebElement employeeName;
+	@FindBy(xpath="//input[@id='entitlements_employee_empName'][@class!='ac_loading']")
+	WebElement empName;
 	
 	@FindBy(id="entitlements_leave_type")
 	WebElement leaveTypeDropDown;
@@ -26,6 +26,10 @@ public class AddLeaveEntitlements extends BaseClass{
 	
 	public AddLeaveEntitlements() {
 		PageFactory.initElements(driver, this);
+	}
+	
+	public void enterEmployeeName(String employeeName) {
+		empName.sendKeys(employeeName);
 	}
 	
 	public void selectLeaveType(String leaveType) {

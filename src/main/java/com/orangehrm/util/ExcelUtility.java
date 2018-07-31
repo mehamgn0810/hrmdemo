@@ -118,7 +118,7 @@ public class ExcelUtility{
 
 		int lastRowNum = mySheet.getLastRowNum();
 
-		int rowsCount = lastRowNum - firstRowNum + 1;
+		//int rowsCount = lastRowNum - firstRowNum + 1;
 
 		for (int i = 0; i < lastRowNum; i++) {
 

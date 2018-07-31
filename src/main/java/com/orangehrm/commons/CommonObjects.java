@@ -5,9 +5,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.orangehrm.base.BaseClass;
-import com.orangehrm.pageobjects.AssignLeave;
 import com.orangehrm.pageobjects.DashboardPage;
 import com.orangehrm.pageobjects.EmployeeList;
+import com.orangehrm.pageobjects.LeaveList;
 
 public class CommonObjects extends BaseClass {
 	
@@ -54,8 +54,8 @@ public class CommonObjects extends BaseClass {
 		return new DashboardPage();
 	}
 
-	public AssignLeave clickLeaveTab() {
+	public LeaveList clickLeaveTab() {
 		leaveTab.click();
-		return new AssignLeave();
+		return new LeaveList();
 	}
 }
