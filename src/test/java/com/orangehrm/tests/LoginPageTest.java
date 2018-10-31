@@ -18,12 +18,12 @@ public class LoginPageTest extends BaseClass {
 		loginPage = new LoginPage();
 	}
 
-	@Test(priority=0)
+	@Test
 	public void verifyLogo() {
 		Assert.assertTrue(loginPage.isLoginPageLogoDisplayed(), "Logo not dipslayed in LoginPage");
 	}
 	
-	@Test(priority=1)
+	@Test
 	public void logintest() {
 		dashboardPage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 		Assert.assertTrue(dashboardPage.isLogoDisplayed(), "Logo not dipslayed in HomePage");

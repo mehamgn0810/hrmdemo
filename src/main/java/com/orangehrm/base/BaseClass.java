@@ -15,21 +15,21 @@ import org.testng.annotations.BeforeMethod;
 
 import com.orangehrm.util.EventListener;
 
-public class BaseClass{
+public class BaseClass {
 
 	protected static WebDriver driver;
 	protected Properties prop;
 	protected EventListener el;
 	protected EventFiringWebDriver eDriver;
-	
+
 	@BeforeMethod
 	protected void setUp() {
 		loadProperties();
 		initializeBrowser();
-		initializeEventListener();
+		//initializeEventListener();
 		driver.get(prop.getProperty("url"));
 	}
-	
+
 	@AfterMethod
 	protected void tearDown() {
 		driver.quit();
@@ -45,7 +45,8 @@ public class BaseClass{
 	protected void loadProperties() {
 		try {
 			prop = new Properties();
-			FileInputStream fis = new FileInputStream("C:\\Users\\MEHAVARNAN\\git\\hrmdemo\\src\\main\\resources\\config.properties");
+			FileInputStream fis = new FileInputStream(
+					"C:\\Users\\MEHAVARNAN\\git\\hrmdemo\\src\\main\\resources\\config.properties");
 			prop.load(fis);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -63,11 +64,10 @@ public class BaseClass{
 		} else if (browser.equalsIgnoreCase("firefox")) {
 			driver = new FirefoxDriver();
 		}
-		
+
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(7, TimeUnit.SECONDS);
 	}
-
 
 }

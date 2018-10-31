@@ -95,8 +95,9 @@ public class AddEmployee extends CommonObjects {
 		return flag;
 	}
 	
-	public void clickSaveButton() {
+	public PersonalDetails clickSaveButton() {
 		saveButton.click();
+		return new PersonalDetails();
 	}
 
 }

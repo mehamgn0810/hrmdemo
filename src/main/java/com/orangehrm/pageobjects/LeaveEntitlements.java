@@ -9,7 +9,7 @@ import com.orangehrm.base.BaseClass;
 
 public class LeaveEntitlements extends BaseClass{
 	
-	@FindBy(xpath="//div[@class='message success fadable'][contains(text(),'Successfully Assigned')]")
+	@FindBy(xpath="//div[@class='message success fadable'][contains(text(),'Successfully Added')]")
 	WebElement addSuccessMessage;
 	
 	public LeaveEntitlements() {

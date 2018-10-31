@@ -35,7 +35,7 @@ public class EmployeeTest extends BaseClass {
 	}
 	
 	@Test
-	public void addEmployeeWithLoginDetails() throws InterruptedException { 
+	public void addEmployeeWithLoginDetails() { 
 		addEmployee = employeeList.clickAddEmployeeLink();
 		addEmployee.enterFirstName("Jack");
 		addEmployee.enterLastName("Sparrow");
@@ -44,23 +44,24 @@ public class EmployeeTest extends BaseClass {
 		addEmployee.enterUserPassword("testing123");
 		addEmployee.enterRePassword("testing123");
 		Assert.assertTrue(addEmployee.verifySelectedStatus("Enabled"), "Employee Status is not Enabled");
-		addEmployee.clickSaveButton();
+		personalDetails = addEmployee.clickSaveButton();
+		Assert.assertEquals(personalDetails.verifyProfileName(), "Jack Sparrow", "Profile Name not displayed");
 	}
 
-	@Test(dataProvider = "employeeTest", dataProviderClass = TestDataProviders.class, enabled = false, dependsOnMethods = "addEmployeeWithoutPhotograph")
-	public void searchEmployeeWithName(String name) {
-		employeeList.searchEmployeebyName(name);
-		Assert.assertTrue(employeeList.isEmployeeDisplayed(name), "Employee not displayed in Results List");
+	@Test(enabled = true, dependsOnMethods = "addEmployeeWithLoginDetails")
+	public void searchEmployeeWithName() {
+		employeeList.searchEmployeebyName("Jack");
+		Assert.assertTrue(employeeList.isEmployeeDisplayed("Jack"), "Employee not displayed in Results List");
 	}
 
-	@Test(dataProvider = "employeeTest", dataProviderClass = TestDataProviders.class, dependsOnMethods = "searchEmployeeWithName", enabled=false)
-	public void deleteEmployee(String fName) {
-		employeeList.searchEmployeebyName(fName);
-		employeeList.selectEmployeebyFirstName(fName);
+	@Test(dependsOnMethods = "searchEmployeeWithName", enabled=true, priority=5)
+	public void deleteEmployee() {
+		employeeList.searchEmployeebyName("Jack");
+		employeeList.selectEmployeebyFirstName("Jack");
 		employeeList.deleteSelectedRecords();
 		Assert.assertTrue(employeeList.verifySuccessfullyDeletedMessage(),
 				"Successfully Deleted Message not displayed");
-		Assert.assertFalse(employeeList.isEmployeeDisplayed(fName), "Employee displayed in Results List");
+		Assert.assertFalse(employeeList.isEmployeeDisplayed("Jack"), "Employee displayed in Results List");
 	}
 	
 }

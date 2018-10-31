@@ -31,7 +31,7 @@ public class LeaveTest extends BaseClass{
 	}
 	
 	@Test
-	public void addEntitlements() throws InterruptedException {
+	public void addEntitlements() {
 		leaveList = dashboardPage.clickLeaveTab();
 		addLeaveEntitlements = leaveList.clickAddEntitlements();
 		addLeaveEntitlements.enterEmployeeName("John Smith");
